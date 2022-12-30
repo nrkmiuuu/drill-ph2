@@ -7,7 +7,7 @@ interface IPosseStudent
 
 class PosseStudent implements IPosseStudent
 {
-    public string $name;
+    private string $name; //publicはクラス外から無条件にアクセス
 
     public function __construct(string $name)
     {
@@ -26,3 +26,7 @@ try {
 } catch(ERROR $e){
     print_r($e->getMessage() . PHP_EOL);
 }
+
+//index.phpの10行目でアクセス修飾子を適切なものに変更してください。
+//Cannot access private property PosseStudent::$nameと表示されること
+//publicをprivateに変更した
