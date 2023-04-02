@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS week25;
 USE week25;
 
-? ? books (
+CREATE TABLE books (
     id INT(11) AUTO_INCREMENT PRIMARY KEY COMMENT 'ID',
     title VARCHAR(255) COMMENT '本の名前',
     author VARCHAR(255) COMMENT '執筆者名',
@@ -15,3 +15,11 @@ INSERT INTO `books` VALUES
 (1, 'パラレルワールド　１１次元の宇宙から超空間へ', 'ミチオ・カク', 'NHK出版', '2006-01-25', now(), now()),
 (2, 'エクストリームプログラミング', 'Kent Beck', 'オーム社', '2015-06-25', now(), now()),
 (3, '永遠の仔(一)再会', '天童 荒太', '幻冬舎', '2004-09-30', now(), now());
+
+
+-- SQLでテーブルを作成してください。
+-- init.sqlの4行目の?部分それぞれに適切な句を入れてください
+-- ?部分それぞれに適切な句を入れ、imageをbuildする
+-- buildしたimageからcontainerを立ち上げる
+-- containerのmysqlに接続し、 `select * from books;` を実行する。
+-- 実行した結果、以下のようにbooks一覧が表示されれば完了。

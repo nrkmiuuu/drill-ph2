@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-  <?= ???("<script>alert('hoge')</script>") ?>
+  <?= htmlspecialchars("<script>alert('hoge')</script>") ?>
 </body>
 </html>
+
+<!-- htmlentitiesでもいける -->

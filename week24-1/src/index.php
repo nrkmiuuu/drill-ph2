@@ -1,6 +1,6 @@
 <?php
 
-$host = ""; #ここにhostを指定する
+$host = "db"; #ここにhostを指定する
 $dbname = "posse";
 $user = "root";
 $password = "password";
@@ -19,3 +19,8 @@ try {
 } catch (PDOException $e) {
     exit($e->getMessage()); 
 }
+
+// docker compose upするとエラーが発生します
+// エラー解消するためにはindex.phpの3行目でhost指定をする必要があります。
+// 適切なhostを指定してください。
+// hostを指定し、画面に接続成功と表示されること

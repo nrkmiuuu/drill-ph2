@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-  <?= ??? ?>
+<?php 
+  if(isset($_GET['keyword'])) { $keyword = $_GET['keyword']; } 
+?>
+
 </body>
 </html>
+
+<!-- クエリパラメータを取得する
+パラメータとは値のこと
+index.phpの10行目の???に部分に適切な処理を記述し、クエリパラメータを取得してください。
+docker compose upしたのちにlocalhost:8080?keyword=hogeにアクセスし、画面にhogeと表示されると完了です。 -->
+<!-- bodyの次を直す -->

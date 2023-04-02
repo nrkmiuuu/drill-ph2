@@ -1,4 +1,3 @@
-//あとはコマンドだけ
 <?php
 
 class Student
