@@ -35,7 +35,7 @@ try {
     }, $studies);
     $chart_data = json_encode($formatted_study_data);
 } catch (PDOException $e) {
-    exit($e->getMessage()); 
+    exit($e->getMessage());
 }
 ?>
 

@@ -1,6 +1,7 @@
 <?php
     session_start();
     # nameというkeyに、POSSEという値をセットする
+    $_SESSION['name'] = 'POSSE';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,3 +15,14 @@
   <?= $_SESSION["name"] ?>
 </body>
 </html>
+
+<!-- 
+Sessionを利用する
+
+index.phpの3行目でsessionにキーと値をセットしてください。
+キーはname、値はPOSSEとしてください。
+
+### 終了条件
+画面上にsessionでセットした値が表示されること -->
+
+<!-- $_SESSION[キー名] = 値; -->

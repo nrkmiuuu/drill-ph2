@@ -29,7 +29,7 @@ try {
     echo("テーブル作成成功") . PHP_EOL;
 
     # ???に適切に埋め込んでください
-    $sql = 'insert into students (name, age, created_at, updated_at) values (???)';
+    $sql = 'insert into students (name, age, created_at, updated_at) values (:name, :age, :created_at, :updated_at)';
     $query = $pdo->prepare($sql);
     $query->bindValue(':name', "name", PDO::PARAM_STR);
     $query->bindValue(':age', 20, PDO::PARAM_INT);
@@ -40,3 +40,5 @@ try {
 } catch (PDOException $e) {
     exit($e->getMessage()); 
 }
+
+//mysqlコンテナに入りstudentsテーブルにレコードが挿入されていることを確認する。

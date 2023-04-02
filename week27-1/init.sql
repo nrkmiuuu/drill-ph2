@@ -17,13 +17,14 @@ CREATE TABLE order_details (
     price INT COMMENT '単価',
     created_at DATETIME COMMENT '作成日時',
     updated_at DATETIME COMMENT '更新日時',
-    FOREIGN KEY (`order_id`) REFERENCES orders(`id`)
+    FOREIGN KEY (`order_id`) EFERENCES orders(`id`)
 );
 
 INSERT INTO `orders` VALUES 
 (1, 'しのけんさん', '2022-06-23', now(), now()),
 (2, 'おざっちさん', '2022-07-12',now(), now()),
-(3, 'こたにさん', '2022-03-01', now(), now());
+(3, 'こたにさん', '2022-03-01', now(), now()), 
+-- ↑ここが間違えていた
 (4, 'いわむらさん', '2022-03-01', now(), now());
 
 INSERT INTO `order_details` VALUES 
@@ -35,3 +36,4 @@ INSERT INTO `order_details` VALUES
 (6, 3, 'ピザ', 1, 3000, now(), now()),
 (7, 3, '寿司', 2, 4000, now(), now()),
 (8, 3, 'ビール', 10, 400, now(), now());
+
